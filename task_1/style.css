@@ -1,0 +1,126 @@
+
+body {
+	background-color: #000;
+	color: #fff;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	/* font-family: 'DuckFootprint'; */
+}
+.content {
+	margin: 0 5% 0 5%;
+}
+h1 {
+	color: #ffa;
+}
+
+h2 {
+	color: #ff0;
+}
+
+h3 {
+	color: #faf;
+}
+
+h4 {
+	color: #afa;
+}
+
+h5 {
+	color: #aff;
+}
+
+h6 {
+	color: #faa;
+}
+
+#show_joke_btn {
+	padding: 10px;
+	border-radius: 0;
+	background-color: #fca;
+	border: none;
+	cursor: pointer;
+}
+#show_joke_btn:hover {
+	background-color: #da8;
+	box-shadow: 12px 12px 2px 1px #805580;
+}
+.jokes_window {
+	margin-top: 20px;
+	padding: 30px;
+	background-color: rgb(114, 114, 0);
+	display: none;
+}
+.fav_cartoon_imgs {
+	text-align: center;
+}
+.register_form {
+	max-width: 500px;
+}
+.register_form input {
+	width: 100%;
+	box-sizing : border-box;
+	margin-right: 0;
+	background-color: rgb(244, 255, 184);
+	border-radius: 4px;
+	border: none;
+	padding: 6px
+}
+.register_form textarea {
+	width: 100%;
+	padding: 0;
+	box-sizing : border-box;
+	background-color: rgb(244, 255, 184);
+	border-radius: 4px;
+	border: none;
+	padding: 6px;
+}
+.register_form p {
+	margin: 20px 0 10px 0;
+	color: rgb(201, 236, 0);
+}
+.register_form .submit_btn {
+	margin-top: 20px;
+	padding: 10px 20px 10px 20px;
+	width: max-content;
+	background-color: rgb(122, 143, 0);
+	color: #fff;
+	cursor: pointer;
+}
+.register_form .submit_btn:hover {
+	background-color: rgb(97, 114, 0);
+}
+.register_form h2 {
+	color: rgb(217, 255, 0);
+}
+.register_form select {
+	width: 100%;
+	background-color: rgb(244, 255, 184);
+	border-radius: 4px;
+	border: none;
+	padding: 6px;
+}
+.register_form select option {
+	padding: 6px;
+}
+.register_form select option:hover {
+	background-color: rgb(122, 143, 0);
+}
+.register_form select option:checked {
+	background-color: rgb(244, 255, 184);
+}
+.radio_btn {
+	/* padding: 6px; */
+	color:rgb(244, 255, 182);
+}
+.register_form input[type=radio] {
+	width: min-content;
+	margin-right: 6px;
+	margin-bottom: 6px;
+}
+.register_form input[type=checkbox] {
+	width: min-content;
+	margin-right: 6px;
+}
+.video_cartoon {
+	max-width: 800px;
+	width: 100%;
+}
