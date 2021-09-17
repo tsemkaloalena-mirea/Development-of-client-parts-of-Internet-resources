@@ -1,0 +1,107 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #3d3d3d;
+	color: #fff;
+	font-family: Arial, sans-serif;
+}
+.content-container {
+	width: 80%;
+	padding: 30px;
+	margin: 50px auto 0 auto;
+	/* background-color: #fff; */
+	border: 1px solid #ff7300;
+	border-radius: 10px;
+	box-shadow: 8px 15px rgba(0, 0, 0, .45);
+}
+.content-container h1 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+.content-container h2 {
+	padding-bottom: 30px;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+.content-container p {
+	background-color: #4e4e4e;
+	padding: 30px;
+	border-radius: 10px;
+	font-size: 12px;
+	text-transform: capitalize;
+	line-height: 150%;
+}
+.content-container div {
+	padding-bottom: 20px;
+	font-size: 12px;
+	width: 70%;
+	color: #808080;
+}
+span {
+	color:#ff7300;
+}
+.list-card {
+	max-width: 300px;
+	transition: 1s;
+	position: relative;
+	right: 0px;
+	bottom: 0px;
+}
+.llist-cardist ul li {
+	margin-left: 50px;
+}
+.list-card ol li {
+	margin-left: 50px;
+}
+.list-card:hover {
+	right: 10px;
+	bottom: 10px;
+}
+.link-card {
+	max-width: 300px;
+	text-align: center;
+}
+.link-card img {
+	padding-bottom: 20px;
+	width: 200px;
+}
+a {
+	display: block;
+	height: 100%;
+	width: max-content;
+	text-decoration: none;
+	color: #fff;
+}
+.login-card {
+	max-width: 200px;
+}
+.login-card h4 {
+	font-size: 14px;
+	color: #808080;
+	margin-bottom: 10px;
+}
+.login-card input {
+	width: 100%;
+	box-sizing : border-box;
+	font-size: 14px;
+	color: #808080;
+	margin-bottom: 20px;
+	background-color: #1e1e1e;
+	padding: 7px;
+	border-radius: 15px;
+	border: 1px solid #ff7300;
+}
+.login-card .submit_btn {
+	color: #fff;
+	background-color: #696969;
+	border: none;
+	margin: 30px 0 0 0;
+	box-shadow: 3px 8px rgba(0, 0, 0, .45);
+}
