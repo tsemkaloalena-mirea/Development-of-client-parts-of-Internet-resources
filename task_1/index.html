@@ -13,6 +13,9 @@
 		function show_joke() {
 			document.getElementsByClassName("jokes_window")[0].style.display = "block"
 		}
+		function show_window() {
+			window.alert("Окошко вспыло");
+		}
 	</script>
 </head>
 
@@ -35,6 +38,7 @@
 		<p>x<sup>2</sup>=144</p>
 		<hr>
 		<button id="show_joke_btn" onclick="show_joke()">Показать анекдоты</button>
+		<button id="show_joke_btn" onclick="show_window()">Показать вспывающее окно</button>
 		<div class="jokes_window">
 			<p>— Скажи триста. — Триста. — Абстрагируйся от суеты, достигнув с космосом единства.</p>
 			<hr>
@@ -140,7 +144,6 @@
 		<br>
 		<br>
 		<hr>
-		<p>Я не нашёль сайт, который разрешил бы использование своей страницы в iframe других сайтов, так что воть:</p>
 		<iframe src="additional.html" width="80%" height="600" align="right" marginheight="20" marginwidth="20" frameborder="1" scrolling="auto">
 			Ваш браузер не поддерживает плавающие фреймы!
 		</iframe>
