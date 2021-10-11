@@ -1,0 +1,287 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body,
+html {
+	height: 100%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+}
+.content {
+	padding: 20px 5% 20px 5%;
+}
+
+h2 {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.solution {
+	background-color: rgb(212, 255, 144);
+	padding: 15px;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+.jumping_letter :nth-child(even) {
+	vertical-align: -5px;
+	text-transform: uppercase;
+}
+.jumping_letter :nth-child(odd) {
+	text-transform: uppercase;
+}
+#img1 {
+	max-width: 300px;
+	width: 100%;
+	margin: 15px;
+	box-shadow: 0 0 10px #000;
+}
+#img2 {
+	max-width: 300px;
+	width: 100%;
+	margin: 15px;
+	transition: 1s;
+	box-shadow: 0 0 15px rgb(225, 231, 227), 10px 10px rgb(151, 157, 127), -15px -15px rgb(182, 194, 0), 0 0 25px 5px rgb(38, 102, 98);
+}
+#img2:hover {
+	box-shadow: 0 0 15px rgb(38, 102, 98), -10px -10px rgb(244, 255, 85), 15px 15px rgb(200, 213, 0), 0 0 25px 10px rgb(38, 102, 98);
+}
+#task3 {
+	box-shadow: 5px 5px 7px rgb(184, 156, 160);
+}
+.solution ol {
+	list-style-position: inside;
+}
+#spades_sign::after {
+	content: ' \2660';
+}
+#clubs_sign::after {
+	content: ' \2663';
+}
+#hearts_sign::after {
+	content: ' \2665';
+}
+#diams_sign::after {
+	content: ' \2666';
+}
+#alpha_sign::after {
+	content: ' \03B1';
+}
+#beta_sign::after {
+	content: ' \03B2';
+}
+#gamma_sign::after {
+	content: ' \03B3';
+}
+#delta_sign::after {
+	content: ' \03B4';
+}
+#epsilon_sign::after {
+	content: ' \03B5';
+}
+#dollar_sign::after {
+	content: ' \0024';
+}
+#euro_sign::after {
+	content: ' \20AC';
+}
+#lira_sign::after {
+	content: ' \20A4';
+}
+#cent_sign::after {
+	content: ' \00A2';
+}
+#pound_sign::after {
+	content: ' \00A3';
+}
+#curren_sign::after {
+	content: ' \00A4';
+}
+#yen_sign::after {
+	content: ' \00A5';
+}
+#copyright_sign::after {
+	content: ' \00A9';
+}
+#registered_sign::after {
+	content: ' \00AE';
+}
+#trademark_sign::after {
+	content: ' \2122';
+}
+#onefourth_sign::after {
+	content: ' \00BC';
+}
+#onesecond_sign::after {
+	content: ' \00BD';
+}
+#threequarters_sign::after {
+	content: ' \00BE';
+}
+#section_sign::after {
+	content: ' \00A7';
+}
+#pilcrow_sign::after {
+	content: ' \00B6';
+}
+#emdash_sign::after {
+	content: ' \2014';
+}
+#endash_sign::after {
+	content: ' \2013';
+}
+#hyphen_sign::after {
+	content: ' \2010';
+}
+
+#wearycat_sign::after {
+	content: ' \1F640';
+}
+#scriptcapitalb_sign::after {
+	content: ' \212C';
+}
+#summation_sign::after {
+	content: ' \2211';
+}
+#squareroot_sign::after {
+	content: ' \221A';
+}
+#infinity_sign::after {
+	content: ' \221E';
+}
+#сhess_board {
+	width: 500px;
+	height: 500px;
+	table-layout: fixed;
+	background: linear-gradient(rgb(87, 71, 60), rgb(138, 137, 126));;
+}
+#сhess_board th {
+	background-color: #fff;
+}
+#сhess_board tr:nth-child(even) td:nth-child(odd) {
+	background-color: rgb(152, 145, 133);
+}
+#сhess_board tr:nth-child(even) td:nth-child(even) {
+	/* background: linear-gradient(rgb(255, 203, 9), rgb(216, 171, 2));; */
+	background-color: rgb(226, 226, 224);
+}
+#сhess_board tr:nth-child(odd) td:nth-child(even) {
+	background-color: rgb(152, 145, 133);
+}
+#сhess_board tr:nth-child(odd) td:nth-child(odd) {
+	background-color: rgb(226, 226, 224);
+	
+}
+
+#circle_diagram {
+	width: 150px;
+	height: 150px;
+	border: 25px solid rgb(100, 131, 123);
+	border-radius: 100px;
+	border-right-color: rgb(156, 196, 168);
+	background-color: rgb(225, 231, 227);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+}
+
+.register_form {
+	max-width: 500px;
+}
+.register_form input {
+	width: calc(100% - 20px);
+	box-sizing : border-box;
+	margin-right: 0;
+	background-color: #fff;
+	border: 2px solid rgb(223, 221, 215);
+	color: rgb(85, 66, 57);
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	border-radius: 4px;
+	padding: 6px
+}
+.register_form input:invalid + span:after {
+	color: red;
+	font-weight: bolder;
+	content: "\274B";
+	font-size: 15px;
+	padding-left: 5px;
+}
+.register_form input:valid + span:after {
+	color: green;
+	font-weight: bolder;
+	content: "\2714";
+	font-size: 15px;
+	padding-left: 5px;
+}
+.register_form textarea {
+	width: calc(100% - 20px);
+	padding: 0;
+	box-sizing : border-box;
+	background-color: #fff;
+	border: 2px solid rgb(223, 221, 215);
+	color: rgb(85, 66, 57);
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	border-radius: 4px;
+	padding: 6px;
+}
+.register_form p {
+	margin: 20px 0 10px 0;
+}
+.register_form .submit_btn {
+	margin-top: 20px;
+	padding: 10px 20px 10px 20px;
+	width: max-content;
+	background-color: rgb(85, 66, 57);
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	border: none;
+}
+.register_form .submit_btn:hover {
+	background-color: rgb(69, 86, 110);
+}
+
+#square {
+	width: 40vw;
+	height: 40vw;
+	background-color: rgb(38, 102, 98);
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+}
+#square::after {
+	content: "Подсолнух";
+}
+
+.checkbox_form p input {
+	margin-right: 20px;
+}
+.checkbox_form p {
+	padding-top: 5px;
+	text-transform: uppercase;
+}
+.checkbox_form p input:checked + span {
+	background: rgb(79, 94, 114);
+	color: #fff;
+}
+.checkbox_form .submit_btn {
+	margin-top: 20px;
+	padding: 10px 20px 10px 20px;
+	width: max-content;
+	background-color: rgb(79, 94, 114);
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	border: none;
+}
+.checkbox_form .submit_btn:hover {
+	background-color: rgb(59, 73, 92);
+}
