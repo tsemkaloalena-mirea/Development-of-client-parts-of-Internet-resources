@@ -45,7 +45,7 @@ h2 {
 	box-shadow: 0 0 15px rgb(225, 231, 227), 10px 10px rgb(151, 157, 127), -15px -15px rgb(182, 194, 0), 0 0 25px 5px rgb(38, 102, 98);
 }
 #img2:hover {
-	box-shadow: 0 0 15px rgb(38, 102, 98), -10px -10px rgb(244, 255, 85), 15px 15px rgb(200, 213, 0), 0 0 25px 10px rgb(38, 102, 98);
+	box-shadow: 0 0 7px rgb(38, 102, 98), -10px -10px rgb(151, 157, 127), 15px 15px rgb(182, 194, 0), 0 0 25px 10px rgb(38, 102, 98);
 }
 #task3 {
 	box-shadow: 5px 5px 7px rgb(184, 156, 160);
@@ -190,8 +190,13 @@ h2 {
 .register_form {
 	max-width: 500px;
 }
+
+.register_form span {
+	float: left;
+}
 .register_form input {
-	width: calc(100% - 20px);
+	display: block;
+	width: 100%;
 	box-sizing : border-box;
 	margin-right: 0;
 	background-color: #fff;
@@ -202,22 +207,22 @@ h2 {
 	border-radius: 4px;
 	padding: 6px
 }
-.register_form input:invalid + span:after {
+.register_form input:invalid + span:after{
 	color: red;
 	font-weight: bolder;
 	content: "\274B";
 	font-size: 15px;
-	padding-left: 5px;
+	padding-right: 5px;
 }
 .register_form input:valid + span:after {
 	color: green;
 	font-weight: bolder;
 	content: "\2714";
 	font-size: 15px;
-	padding-left: 5px;
+	padding-right: 5px;
 }
 .register_form textarea {
-	width: calc(100% - 20px);
+	width: 100%;
 	padding: 0;
 	box-sizing : border-box;
 	background-color: #fff;
