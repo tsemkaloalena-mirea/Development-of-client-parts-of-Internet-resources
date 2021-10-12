@@ -191,12 +191,8 @@ h2 {
 	max-width: 500px;
 }
 
-.register_form span {
-	float: left;
-}
 .register_form input {
-	display: block;
-	width: 100%;
+	width: calc(100% - 20px);
 	box-sizing : border-box;
 	margin-right: 0;
 	background-color: #fff;
@@ -212,14 +208,14 @@ h2 {
 	font-weight: bolder;
 	content: "\274B";
 	font-size: 15px;
-	padding-right: 5px;
+	margin-left: 5px;
 }
 .register_form input:valid + span:after {
 	color: green;
 	font-weight: bolder;
 	content: "\2714";
 	font-size: 15px;
-	padding-right: 5px;
+	margin-left: 5px;
 }
 .register_form textarea {
 	width: 100%;
