@@ -25,10 +25,33 @@ h2 {
 	color: #fff;
 	border-radius: 7px;
 }
+.weather_window > p {
+	font-size: min(max(4vw, 18px), 28px);
+	font-weight: bold;
+}
 .today_forecast {
 	display: flex;
-	/* flex-direction: row; */
+	flex-direction: row;
+	margin-top: 20px;
+	gap: 10px;
 }
+.today_forecast div {
+	width: 50%;
+}
+.today_forecast div img {
+	min-width: 70px;
+	width: 40%;
+}
+.today_forecast div .temperature {
+	font-size: min(max(4vw, 18px), 26px);
+	/* font-weight: bold; */
+}
+.today_forecast div .temperature span {
+	font-size: 12px;
+	vertical-align: top;
+	color: rgb(190, 190, 190);
+}
+
 .week_forecast {
 	display: flex;
 	flex-direction: row;
@@ -39,13 +62,16 @@ h2 {
 	flex-direction: column;
 	width: calc(100% / 7);
 	text-align: center;
-	/* background-color:blueviolet; */
+	border-left: 1px solid rgb(51, 51, 51);
+}
+.week_forecast div:nth-child(1) {
+	border-left: none;
 }
 .week_forecast div .temperature:nth-child(even) {
 	color: rgb(190, 190, 190);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 	.week_forecast {
 		flex-direction: column;
 		align-items: stretch;
@@ -56,9 +82,46 @@ h2 {
 		width: 100%;
 		justify-content: space-between;
 		align-items: center;
+		border-left: none;
+		border-top: 1px solid rgb(51, 51, 51);
 	}
 	.week_forecast div .day {
 		width: 40%;
 		text-align: left;
+	}
+}
+.gallery {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	margin-top: 200px;
+}
+.gallery div{
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+.gallery div div {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	gap: 10px;
+}
+.gallery div div img{
+	width: 100%;
+	box-shadow: 0 0 3px #000;
+	border-radius: 5px;
+}
+@media(max-width: 900px) {
+	.gallery div{
+		flex-direction: column;
+	}
+	.gallery div div {
+		width: 100%;
+	}
+}
+@media(max-width: 400px) {
+	.gallery {
+		flex-direction: column;
 	}
 }
