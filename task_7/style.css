@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body,
+html {
+	height: 100%;
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+}
+.content {
+	padding: 20px 5% 20px 5%;
+}
+h2 {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-weight: lighter;
+}
+
+.weather_window {
+	max-width: 800px;
+	padding: 20px;
+	background-color: #000;
+	color: #fff;
+	border-radius: 7px;
+}
+.today_forecast {
+	display: flex;
+	/* flex-direction: row; */
+}
+.week_forecast {
+	display: flex;
+	flex-direction: row;
+	margin-top: 50px;
+}
+.week_forecast div {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% / 7);
+	text-align: center;
+	/* background-color:blueviolet; */
+}
+.week_forecast div .temperature:nth-child(even) {
+	color: rgb(190, 190, 190);
+}
+
+@media (max-width: 700px) {
+	.week_forecast {
+		flex-direction: column;
+		align-items: stretch;
+	}
+	.week_forecast div {
+		flex-wrap: wrap;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.week_forecast div .day {
+		width: 40%;
+		text-align: left;
+	}
+}
