@@ -233,9 +233,9 @@ h2 {
 .cards > div:hover {
 	transform: scale(1.05);
 }
-.cards:hover > div:not(:hover) {
+/* .cards:hover > div:not(:hover) {
 	filter: blur(10px);
-}
+} */
 .cards > div .card_title {
 	background-color:rgb(112, 0, 47);
 	color: #fff;
@@ -304,22 +304,23 @@ h2 {
 	left: 50%;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	transition-delay: 2s;
 }
 #slider_image_1 {
-	background-image: url(images/image3.jpg);
-}
-#slider_image_2 {
 	background-image: url(images/image1.jpg);
 }
+#slider_image_2 {
+	background-image: url(images/image2.jpg);
+}
 #slider_image_3 {
-	background-image: url(images/image6.jpg);
+	background-image: url(images/image3.jpg);
 }
 #slider_image_4 {
-	background-image: url(images/image7.jpg);
+	background-image: url(images/image4.jpg);
 }
 #slider_image_5 {
-	background-image: url(images/image11.jpg);
+	background-image: url(images/image5.jpg);
 }
 .slider_text {
 	position: absolute;
@@ -328,31 +329,24 @@ h2 {
 	bottom: 50px;
 	left: 20px;
 	font-size: 14px;
-	width: 50%;
+	width: 40%;
 	display: none;
 }
 .slider_text h1 {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 5px;
 }
-.slider_dot:checked + .slider_image {
-	left: 0;
-	z-index: 2;
-	transition: left 1s ease-out;
-}
-.slider_dot:checked + .slider_image + .slider_text{
-	display: block;
-}
 .triangle_background {
+	position: absolute;
+	z-index: 3;
 	bottom: 0;
 	left: 0;
 	width: 0;
 	height: 0;
 	border-top: 500px solid transparent;
-	border-left: 60vw solid rgba(134, 44, 44, 0.712);;
+	border-left: 60vw solid rgba(134, 44, 44, 0.712);
 }
-
 .slider input {
 	display: none;
 }
@@ -371,21 +365,32 @@ h2 {
 	border-radius: 50px;
 	margin: 1px;
 }
-.slider_dots label:hover {
-	background-color:rgb(255, 77, 64);
+.slider_dot:checked + .slider_image {
+	left: 0;
+	z-index: 2;
+	transition: left 1s ease-out;
 }
-
-
-label {
-	position: relative;
-	z-index: 6;
-	/* bottom: 10px; */
-	/* left: 20px; */
-	cursor: pointer;
-	display: inline-block;
-	width: 12px;
-	height: 12px;
-	background: #fff;
-	border-radius: 50px;
-	margin: 1px;
+.slider_dot:checked + .slider_image + .slider_text{
+	display: block;
+	animation: change_text_slider 1s ease;
+}
+@keyframes change_text_slider {
+	0% {
+		bottom: -100px;
+	}
+	100% {
+		bottom: 50px;
+	}
+}
+@media (max-width: 550px) {
+	.triangle_background {
+		width: 100%;
+		height: 50%;
+		border-top: 0;
+		border-left: 0;
+		background: rgba(134, 44, 44, 0.712);
+	}
+	.slider_text {
+		width: calc(100% - 40px);
+	}
 }

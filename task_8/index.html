@@ -28,7 +28,7 @@
 		</div>
 
 		<div class="cards">
-			<div id="card1">
+			<div id="card1" onmouseover="blurCards(0)" onmouseout="unblurCards()">
 				<div class="card_title">01</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -37,7 +37,7 @@
 					culpa qui officia deserunt mollit anim id est laborum.</p>
 				<div class="card_btn">Details</div>
 			</div>
-			<div id="card2">
+			<div id="card2" onmouseover="blurCards(1)" onmouseout="unblurCards()">
 				<div class="card_title">02</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -46,7 +46,7 @@
 					culpa qui officia deserunt mollit anim id est laborum.</p>
 				<div class="card_btn">Details</div>
 			</div>
-			<div id="card3">
+			<div id="card3" onmouseover="blurCards(2)" onmouseout="unblurCards()">
 				<div class="card_title">03</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -58,50 +58,93 @@
 		</div>
 
 		<div class="slider">
-			<!-- <div class="slider_text">
-				<div class="triangle_background"></div>
-				<div class="slider_text_info">
-					<h1>Lorem ipsum dolor</h1>
-					<p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></p>
-				</div>
-				<div class="slider_dots">
-					<label for="slider_dot_1"></label>
-					<label for="slider_dot_2"></label>
-					<label for="slider_dot_3"></label>
-					<label for="slider_dot_4"></label>
-					<label for="slider_dot_5"></label>
-				</div>
-			</div> -->
+			<div class="triangle_background"></div>
+			<div class="slider_dots">
+				<label for="slider_dot_1"></label>
+				<label for="slider_dot_2"></label>
+				<label for="slider_dot_3"></label>
+				<label for="slider_dot_4"></label>
+				<label for="slider_dot_5"></label>
+			</div>
 			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_1" checked>
 			<div class="slider_image" id="slider_image_1"></div>
 			<div class="slider_text">
 				<h1>Lorem ipsum dolor</h1>
-				<p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></p>
+				<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+					totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae
+					dicta sunt, explicabo.</p>
 			</div>
-			<label for="slider_dot_1"></label>
 
 			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_2">
 			<div class="slider_image" id="slider_image_2"></div>
 			<div class="slider_text">
-				<h1>Lorem ipsum dolor</h1>
-				<p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></p>
+				<h1>Consectetur adipiscing elit</h1>
+				<p>Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur
+					magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est.</p>
 			</div>
-			<label for="slider_dot_2"></label>
 
 			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_3">
 			<div class="slider_image" id="slider_image_3"></div>
 			<div class="slider_text">
-				<h1>Lorem ipsum dolor</h1>
-				<p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></p>
+				<h1>Sed do eiusmod tempor incididunt ut</h1>
+				<p>Qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi
+					tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem.</p>
 			</div>
-			<label for="slider_dot_3"></label>
 
 			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_4">
 			<div class="slider_image" id="slider_image_4"></div>
+			<div class="slider_text">
+				<h1>Labore et dolore magna aliqua</h1>
+				<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+					aliquid ex ea commodi consequatur?</p>
+			</div>
+
 			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_5">
 			<div class="slider_image" id="slider_image_5"></div>
+			<div class="slider_text">
+				<h1>Ut enim ad minim veniam</h1>
+				<p>Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae
+					consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>
+			</div>
 		</div>
 	</div>
+	<script>
+		function blurCards(n) {
+			let cards = document.getElementsByClassName("cards")[0].children;
+			for (let i = 0; i < cards.length; i++) {
+				if (n != i) {
+					cards[i].style.filter = "blur(10px)";
+				}
+			}
+		}
+
+		function unblurCards() {
+			let cards = document.getElementsByClassName("cards")[0].children;
+			for (let i = 0; i < cards.length; i++) {
+				cards[i].style.filter = "blur(0)";
+			}
+		}
+
+		function change_dot_color(n, event) {
+			let dots = document.getElementsByClassName("slider_dots")[0].children;
+			for (let j = 0; j < dots.length; j++) {
+				if (n == j) {
+					dots[j].style.background = "rgb(255, 77, 64)";
+				}
+				else {
+					dots[j].style.background = "#fff";
+				}
+			}
+		}
+
+		document.getElementsByClassName("slider_dots")[0].children[0].style.background = "rgb(255, 77, 64)";
+
+		let inputs = document.getElementsByClassName("slider_dot");
+		for (let i = 0; i < inputs.length; i++) {
+			inputs[i].addEventListener("click", change_dot_color.bind(event, i));
+		}
+
+	</script>
 </body>
 
 </html>
