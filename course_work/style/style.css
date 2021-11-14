@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body,
+html {
+	height: 100%;
+	font-family: 'Duck Footprint';
+	font-weight: 400;
+	font-size: 30px;
+}
+.content {
+	
+}
+h2 {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	/* font-weight: lighter; */
+}
+
+
+
+.logo p {
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* background-color: rgb(213, 223, 146); */
+	padding: 10px 5% 10px 5%;
+	font-size: 40px;
+}
+.menu ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.menu ul li {
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+	/* cursor: pointer; */
+	background-image: url(../style/images/button-background.png);
+	background-size: 0% 50%;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.menu ul li:hover {
+	background-size: 100% 50%;
+	transition: .5s;
+}
+.menu a {
+	text-decoration: none;
+	color: #000;
+}
+
+.toggle-menu {
+	display: none;
+	cursor: pointer;
+	float: right;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+}
+.toggle-menu img {
+	display: block;
+	width: 36px;
+	height: auto;
+	margin: 5px 0;
+	transition: 0.4s;
+}
+.change .bar1 {
+	transform: rotate(-45deg) translate(-10px, 8px);
+}
+.change .bar2 {
+	opacity: 0;
+}
+.change .bar3 {
+	transform: rotate(45deg) translate(-8px, -8px);
+}
+@media (min-width: 750px) {
+	.menu ul {
+		display: flex !important;
+	}
+}
+@media (max-width: 750px) {
+	.menu ul {
+		flex-direction: column;
+		display: none;
+	}
+	.menu {
+		flex-direction: column;
+		font-size: 34px;
+	}
+	.toggle-menu {
+		display: inline-block;
+	}
+}
+
+@font-face {
+	font-family: 'Duck Footprint'; 
+	src: url("/style/fonts/Duck Footprint Light.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: 200; 
+}
+@font-face {
+	font-family: 'Duck Footprint'; 
+	src: url("/style/fonts/Duck Footprint Regular.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: 300; 
+}
+@font-face {
+	font-family: 'Duck Footprint'; 
+	src: url("/style/fonts/Duck Footprint Semi Bold.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: 400; 
+}
+@font-face {
+	font-family: 'Duck Footprint'; 
+	src: url("/style/fonts/Duck Footprint Bold.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: 500; 
+}
