@@ -305,7 +305,7 @@ h2 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	transition-delay: 2s;
+	transition-delay: 1s;
 }
 #slider_image_1 {
 	background-image: url(images/image1.jpg);
@@ -368,11 +368,11 @@ h2 {
 .slider_dot:checked + .slider_image {
 	left: 0;
 	z-index: 2;
-	transition: left 1s ease-out;
+	transition: left 0.5s ease-out;
 }
 .slider_dot:checked + .slider_image + .slider_text{
 	display: block;
-	animation: change_text_slider 1s ease;
+	animation: change_text_slider 0.5s ease;
 }
 @keyframes change_text_slider {
 	0% {

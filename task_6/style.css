@@ -365,6 +365,11 @@ h2 {
 	transform: rotate(45deg) translate(-8px, -8px);
 	background-color: rgb(37, 37, 37);
 }
+@media (min-width: 700px) {
+	.flex-menu-3 ul {
+		display: flex !important;
+	}
+}
 @media (max-width: 700px) {
 	.flex-menu-3 ul {
 		flex-direction: column;
