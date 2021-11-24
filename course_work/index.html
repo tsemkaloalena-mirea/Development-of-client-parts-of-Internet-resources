@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style/style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<title>CHANGE THE TITLE!!!!!</title>
+	<script defer src="./style/js/functions.js"></script>
+	<!-- <script>
+
+// document.addEventListener("keydown", function(e){ alert(e.key, e.char, e.keyCode) })
+
+var e = new KeyboardEvent("keydown", {bubbles : true, cancelable : true, key : 68, ctrlKey : true});
+document.dispatchEvent(e);
+
+delete e.keyCode;
+Object.defineProperty(e, "keyCode", {"value" : 666})
+	</script> -->
+</head>
+
+<body>
+	<nav class="menu">
+		<div>
+			<div class="logo">
+				<img src="./style/images/logo.png">
+				<p>Paintbrush</p>
+			</div>
+			<div class="toggle-menu" onclick="button_clicked(this)">
+				<img src="./style/images/toggle-menu-1.png" class="bar1">
+				<img src="./style/images/toggle-menu-2.png" class="bar2">
+				<img src="./style/images/toggle-menu-3.png" class="bar3">
+			</div>
+		</div>
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">Products</a></li>
+			<ul class="submenu">
+				<li><a href="">Paints</a></li>
+				<li><a href="">Paint brushes</a></li>
+				<li><a href="">Plastic and plasticine</a></li>
+				<li><a href="">Easels</a></li>
+				<li><a href="">Art books</a></li>
+			</ul>
+
+			<li><a href="">Ideas</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</nav>
+	<div class="content">
+		Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+		aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+		Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni
+	</div>
+
+	<div class="footer">
+		<ul>Menu:
+			<li><a href="">home</a></li>
+			<li><a href="">products</a></li>
+			<li><a href="">ideas</a></li>
+			<li><a href="">contact</a></li>
+		</ul>
+		<ul>Products:
+			<li><a href="">paints</a></li>
+			<li><a href="">paint brushes</a></li>
+			<li><a href="">plastic and plasticine</a></li>
+			<li><a href="">easels</a></li>
+			<li><a href="">art books</a></li>
+		</ul>
+
+		<div class="social_networks">
+			<a href=""><img src="style/images/social/facebook.png"></a>
+			<a href=""><img src="style/images/social/reddit.png"></a>
+			<a href=""><img src="style/images/social/telegram.png"></a>
+			<a href=""><img src="style/images/social/instagram.png"></a>
+			<a href=""><img src="style/images/social/twitter.png"></a>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
