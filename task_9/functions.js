@@ -16,7 +16,6 @@ window.onload = function () {
 
 		document.getElementsByClassName("time")[0].innerHTML = time;
 		document.getElementsByClassName("date")[0].innerHTML = now.toDateString();
-
 	}
 
 	function createListElement() {
@@ -32,7 +31,6 @@ window.onload = function () {
 
 		list.appendChild(newElem).append(deleteBtn);
 		inputArea.value = "";
-
 	}
 
 	showTime();
@@ -42,7 +40,6 @@ window.onload = function () {
 		if (event.keyCode === 13) {
 			addListElementBtn.click();
 		}
-	  });
-	  addListElementBtn.addEventListener("click", createListElement);
+	});
+	addListElementBtn.addEventListener("click", createListElement);
 }
-

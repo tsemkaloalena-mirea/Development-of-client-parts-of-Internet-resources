@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<title>Lesson 10</title>
+	<script defer src="functions.js"></script>
+</head>
+
+<body>
+	<div class="content">
+		<div id="task1">
+			<p>Капча на JS</p>
+			<div>
+				<div id="captcha_text"></div>
+				<button id="reload_captcha_btn" onclick="generateCaptcha()"></button>
+			</div>
+			<div>
+				<input type="text" placeholder="Введите капчу" onchange="showCheckBtn()">
+				<button id="check_captcha_btn" onclick="checkCaptcha()">Проверить</button>
+			</div>
+			<p class="captcha_message wrong">Неть, лапуля, попробуй ещё разок</p>
+			<p class="captcha_message correct">Умничка ты моя</p>
+		</div>
+
+		<div id="task2">
+			<h1>Трепещите! Сессия близко!</h1>
+			<div id="session_timer">
+				<div>
+					<span>0</span>дней
+				</div>
+				<div>
+					<span>0</span>часов
+				</div>
+				<div>
+					<span>0</span>минут
+				</div>
+				<div>
+					<span>0</span>секунд
+				</div>
+			</div>
+			<div id="session_image"></div>
+		</div>
+
+		<div id="task3">
+			<span class="loupe" onclick="loupeClicked()"></span>
+			<input type="text" id="search-area" placeholder="Поиск">
+			<span class="cross"></span>
+		</div>
+
+		<div id="task4" class="task4">
+			<div id="scientist_social_icons">
+				<a href=""><img src="facebook.png"></a>
+				<a href=""><img src="twitter.png"></a>
+				<a href=""><img src="instagram.png"></a>
+			</div>
+			<img src="knuth.jpg" onclick="showKnuth()">
+			<div id="scientist_name">Дональд Эрвин Кнут</div>
+			<div id="scientist_city">Милуоки, Висконсин, США</div>
+			<div id="scientist_text">Американский учёный в области информатики. Доктор философии, эмерит-профессор Стэнфордского университета, член Американского философского общества, преподаватель и идеолог программирования.</div>
+			<div id="scientist_buttons">
+				<button>Сообщение</button>
+				<button>Подписаться</button>
+			</div>
+		</div>
+
+		<div id="task5">
+			<div>
+				<img src="youtube.png"/>
+				<span maximum="9000">0</span>
+				<p>Просмотров</p>
+			</div>
+			<div>
+				<img src="linkedin.png"/>
+				<span maximum="1000">0</span>
+				<p>Проектов</p>
+			</div>
+			<div>
+				<img src="facebook.png"/>
+				<span maximum="7000">0</span>
+				<p>Друзей</p>
+			</div>
+			<div>
+				<img src="twitter.png"/>
+				<span maximum="5000">0</span>
+				<p>Постов</p>
+			</div>
+		</div>
+
+		<div id="task6">
+			<h1>Логин</h1>
+			<form action="https://www.google.com/">
+				<input id="mail" type="email" src="text" spellcheck="false" placeholder="Почта" required>
+				<input id="password" type="password" src="text" placeholder="Пароль" required>
+				<a href="">Забыли пароль?</a>
+				<button type="submit">Войти</button>
+				<p>Нет аккаунта? <a href="">Зарегистрируйтесь!</a></p>
+			</form>
+		</div>
+
+		<div id="task7">
+			<div id="modal">
+				<div id="modal-background"></div>
+				<div class="review_block">
+					<div class="stars" onmouseover="paintStars()">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+					<div id="comment">
+						<p>Нууу это вообще наглость &#128020;</p>
+						<p>Как-то мало &#128037;</p>
+						<p>Вообще-то я старалься &#128064;</p>
+						<p>Всего доброго &#127803;</p>
+						<p>Шпащибо &#128536;</p>	
+					</div>
+					<input type="text" placeholder="Поделитесь своим опытом" id="user-review">
+					<button id="submit-review-btn">Отправить</button>
+
+					<p id="change-review-btn">Изменить</p>
+					<p id="thanks">Спасибо за отзыв!</p>
+				</div>
+			</div>
+			<button id="modal-btn" onclick="showModal()">Покажи модал</button>
+		</div>
+		
+
+
+	</div>
+</body>
+
+</html>

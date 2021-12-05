@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<title>PAINTBRUSH | Contacts</title>
+	<script defer src="style/js/functions.js"></script>
+	<script defer src="style/js/menu.js"></script>
+	<script defer src="style/js/footer.js"></script>
+</head>
+
+<body>
+	<nav class="menu"></nav>
+
+	<div class="content">
+		<h1>Контакты</h1>
+		<p>В случае возникновения каких-либо вопросов, комментариев или предложений, пожалуйста, свяжитесь с нашими
+			специалистами по телефону +7 (987) 654-32-10 или напишите нам, используя форму обратной связи:</p>
+		<div class="contact_flex">
+			<div id="contact_form">
+				<h1>Обратная связь</h1>
+				<form>
+					<p>Имя</p>
+					<input src="text" placeholder="Как к Вам обращаться?" required>
+					<p>email</p>
+					<input id="contact_form_email" type="email" src="text" spellcheck="false"
+						placeholder="Введите Ваш email" required>
+					<p>Сообщение</p>
+					<textarea placeholder="Напишите комментарий"></textarea>
+					<div id="captcha">
+						<p>Подтвердите, что Вы не робот</p>
+						<div>
+							<div id="captcha_text"></div>
+							<button id="reload_captcha_btn" onclick="generateCaptcha()"></button>
+						</div>
+						<div>
+							<input type="text" placeholder="Введите капчу" onchange="showCheckBtn()">
+							<button id="check_captcha_btn" onclick="checkCaptcha()">Проверить</button>
+						</div>
+						<p class="captcha_message wrong">Неть, лапуля, попробуй ещё разок</p>
+						<p class="captcha_message correct">Умничка ты моя</p>
+					</div>
+					<button type="submit" disabled>Отправить</button>
+				</form>
+			</div>
+
+			<ul class="contact_list">Наши магазины
+				<li><a target="_blank" href="https://www.google.ru/maps/place/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D0%BA%D0%B0%D1%8F+%D0%BF%D0%BB.,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0/@55.7075793,37.5382261,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54c7b05a61a17:0xb309e248237dda54!8m2!3d55.7075793!4d37.5404148?hl=ru&authuser=0">м. «Василеостровская» Университетская наб., 17</a></li>
+				<li><a target="_blank" href="https://www.google.ru/maps/place/%D0%A6%D0%A1%D0%98+%D0%92%D0%B8%D0%BD%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4/@55.7558091,37.6630582,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54a926654cf53:0xde415092de04b32c!8m2!3d55.7558091!4d37.6652469?hl=ru&authuser=0">м. «Курская» 4-й Сыромятнический пер., д. 1/8с9, ЦСИ Винзавод, п. 22</a></li>
+				<li><a target="_blank" href="https://www.google.ru/maps/place/%D0%BF%D1%80-%D1%82+%D0%9C%D0%B8%D1%80%D0%B0,+40,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+129110/@55.780227,37.6313297,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54a73bd86da33:0xd85e005aa59790b7!8m2!3d55.780227!4d37.6335184?hl=ru&authuser=0">м. «Проспект Мира» пр-т Мира, 40, ТЦ Gardenmir</a></li></a></li>
+				<li><a target="_blank" href="https://www.google.ru/maps/place/Artplay/@55.7527669,37.6681288,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54a9381326ddb:0x8cd87ce0ae86c594!8m2!3d55.7527669!4d37.6703175?hl=ru&authuser=0">м. «Чкаловская» Нижняя Сыромятническая ул., 10, ЦД Artplay, стр. 3, 2 этаж</a></li>
+				<li><a target="_blank" href="https://www.google.ru/maps/place/%D0%A2%D0%B5%D0%B0%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9+%D0%BF%D1%80-%D0%B4,+5%2F1,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+109012/@55.7602345,37.623274,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54a5c61808fbd:0x2821d586d6033be0!8m2!3d55.7602345!4d37.6254627?hl=ru&authuser=0">м. «Лубянка», «Кузнецкий мост» Театральный пр-д, 5/1, ЦДМ 3 этаж</a></li>
+				<li><a target="_blank" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A4%D0%B0%D0%B4%D0%B5%D0%B5%D0%B2%D0%B0,+6,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+125047/@55.775637,37.5963483,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54a162d52f6ed:0xb1d3335e402e9bb1!8m2!3d55.775637!4d37.598537?hl=ru&authuser=0">м. «Маяковская», «Новослободская» ул. Фадеева, д. 6</a></li>
+				<li><a target="_blank" href="https://www.google.ru/maps/place/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%D0%B5+%D1%88.,+92%2F1,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+125565/@55.8545722,37.4694607,17z/data=!3m1!4b1!4m5!3m4!1s0x46b53804462184d7:0x644fc059abe69d5e!8m2!3d55.8545722!4d37.4716494?hl=ru&authuser=0">м. «Речной вокзал» Ленинградское шоссе, д. 92/1</a></li>
+				<li><a target="_blank" href="https://www.google.ru/maps/place/%D0%A1%D0%B5%D1%80%D0%B4%D0%BE%D0%B1%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F+%D1%83%D0%BB.,+68,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+197342/@59.9855542,30.3117593,17z/data=!3m1!4b1!4m5!3m4!1s0x469633f9045a199b:0x6c1fc3bca9ebbf28!8m2!3d59.9855542!4d30.313948?hl=ru&authuser=0">Санкт-Петербург, м. «Черная речка» Сердобольская улица, 68Ф</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="footer"></div>
+	<script>
+		window.onload = function () {
+			generateCaptcha();
+			checkLoginForm();
+		}
+	</script>
+</body>
+
+</html>

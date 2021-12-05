@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<title>PAINTBRUSH | Paints</title>
+	<script defer src="style/js/functions.js"></script>
+	<script defer src="style/js/menu.js"></script>
+	<script defer src="style/js/footer.js"></script>
+	<script defer src="style/js/productList.js"></script>
+</head>
+
+<body>
+	<nav class="menu"></nav>
+
+	<div class="content">
+		
+		<div id="search_area_container">
+			<img src="style/images/loupe.png" class="loupe" onclick="loupeClicked()">
+			<input type="text" id="search_area" placeholder="Поиск">
+			<span class="cross"></span>
+		</div>
+		<h1>Краски</h1>
+		<div class="catalog_gallery"></div>
+		<div id="modal">
+			<div id="modal-background" onclick="closeModal()"></div>
+			<div id="product_description">
+				<div id="close_modal_btn" onclick="closeModal()"></div>
+				<div id="flex_product_description">
+					<img src="">
+					<div id="product_description_info">
+						<div id="product_description_name"></div>
+						<div id="product_description_price">Цена: <span></span></div>
+						<div id="product_description_quantity">Количество товара на складе: <span></span></div>
+						<hr noshade>
+						<p>Производитель: <span></span></p>
+						<p>Страна: <span></span></p>
+						<p>Объем: <span></span></p>
+					</div>
+				</div>
+				<p>Описание</p>
+				<div id="product_description_text"></div>
+			</div>
+		</div>
+    </div>
+
+	<div class="footer"></div>
+    <script>
+		window.onload = function() {
+			loadProducts("paints");
+			fixCardsHeight();			
+		}
+	</script>
+</body>
+</html>

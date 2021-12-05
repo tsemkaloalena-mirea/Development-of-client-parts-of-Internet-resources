@@ -5,83 +5,92 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="./style/style.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<title>CHANGE THE TITLE!!!!!</title>
-	<script defer src="./style/js/functions.js"></script>
-	<!-- <script>
-
-// document.addEventListener("keydown", function(e){ alert(e.key, e.char, e.keyCode) })
-
-var e = new KeyboardEvent("keydown", {bubbles : true, cancelable : true, key : 68, ctrlKey : true});
-document.dispatchEvent(e);
-
-delete e.keyCode;
-Object.defineProperty(e, "keyCode", {"value" : 666})
-	</script> -->
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<title>PAINTBRUSH | Home</title>
+	<script defer src="style/js/functions.js"></script>
+	<script defer src="style/js/menu.js"></script>
+	<script defer src="style/js/footer.js"></script>
+	<script defer src="style/js/homeFunctions.js"></script>
 </head>
 
 <body>
-	<nav class="menu">
-		<div>
-			<div class="logo">
-				<img src="./style/images/logo.png">
-				<p>Paintbrush</p>
-			</div>
-			<div class="toggle-menu" onclick="button_clicked(this)">
-				<img src="./style/images/toggle-menu-1.png" class="bar1">
-				<img src="./style/images/toggle-menu-2.png" class="bar2">
-				<img src="./style/images/toggle-menu-3.png" class="bar3">
-			</div>
-		</div>
-		<ul>
-			<li><a href="">Home</a></li>
-			<li><a href="">Products</a></li>
-			<ul class="submenu">
-				<li><a href="">Paints</a></li>
-				<li><a href="">Paint brushes</a></li>
-				<li><a href="">Plastic and plasticine</a></li>
-				<li><a href="">Easels</a></li>
-				<li><a href="">Art books</a></li>
-			</ul>
+	<nav class="menu"></nav>
 
-			<li><a href="">Ideas</a></li>
-			<li><a href="">Contact</a></li>
-		</ul>
-	</nav>
 	<div class="content">
-		Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-		aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-		Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni
-	</div>
+		<div class="slider">
+			<div class="triangle_background"></div>
+			<div class="slider_dots">
+				<label for="slider_dot_1"></label>
+				<label for="slider_dot_2"></label>
+				<label for="slider_dot_3"></label>
+				<label for="slider_dot_4"></label>
+				<label for="slider_dot_5"></label>
+			</div>
 
-	<div class="footer">
-		<ul>Menu:
-			<li><a href="">home</a></li>
-			<li><a href="">products</a></li>
-			<li><a href="">ideas</a></li>
-			<li><a href="">contact</a></li>
-		</ul>
-		<ul>Products:
-			<li><a href="">paints</a></li>
-			<li><a href="">paint brushes</a></li>
-			<li><a href="">plastic and plasticine</a></li>
-			<li><a href="">easels</a></li>
-			<li><a href="">art books</a></li>
-		</ul>
+			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_1" checked>
+			<div class="slider_image" style="background-image: url(./style/images/slider_images/image1.jpg)"></div>
+			<div class="slider_text">
+				<h1>Туба масла в подарок</h1>
+				<p>При покупке 3-х туб масла Rive Gauche 40мл от Sennelier</p>
+			</div>
 
-		<div class="social_networks">
-			<a href=""><img src="style/images/social/facebook.png"></a>
-			<a href=""><img src="style/images/social/reddit.png"></a>
-			<a href=""><img src="style/images/social/telegram.png"></a>
-			<a href=""><img src="style/images/social/instagram.png"></a>
-			<a href=""><img src="style/images/social/twitter.png"></a>
+			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_2">
+			<div class="slider_image" style="background-image: url(./style/images/slider_images/image2.jpg)"></div>
+			<div class="slider_text">
+				<h1>Мастер-класс от художника</h1>
+				<p>Запись проходит до 08.02.2022</p>
+			</div>
+
+			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_3">
+			<div class="slider_image" style="background-image: url(./style/images/slider_images/image3.jpg)"></div>
+			<div class="slider_text">
+				<h1>До -20% на праздничные товары</h1>
+				<p>Всё для создания новогоднего настроения</p>
+			</div>
+
+			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_4">
+			<div class="slider_image" style="background-image: url(./style/images/slider_images/image4.jpg)"></div>
+			<div class="slider_text">
+				<h1>Освойте новую технику рисования углём</h1>
+				<p>В каталоге скоро появится раздел "Уголь и графит"</p>
+			</div>
+
+			<input class="slider_dot" type="radio" name="slider_dot" id="slider_dot_5">
+			<div class="slider_image" style="background-image: url(./style/images/slider_images/image5.jpg)"></div>
+			<div class="slider_text">
+				<h1>До -15% на бумагу для акварели</h1>
+				<p>Серия Artistico Traditional White Satin</p>
+			</div>
 		</div>
+
+		<h2>Немного о нашем магазине</h2>
+		<p>Безусловно, благодаря своему ассортименту. Его подбору компания уделяет большое внимание. Мы стараемся отобрать лучшее в России, Украине, Европе, Америке; постоянно посещаем выставку во Франкфурте, знакомимся с зарубежными новинками.</p>
+		<p>Так, например, у нас появились в продаже линейки красок немецкого производителя Шминке (Schmincke), до этого мало знакомого российскому покупателю. Значительно расширился ассортимент кистей известного производителя Да Винчи (Da Vinci). Завели мы и мольберты известной итальянской торговой марки Mabef. </p>
+
+		<h2>А теперь по делу :)</h2>
+		<div id="sale_timer_container">
+			<h1>-30% на все акриловые краски</h1>
+			<p>До конца акции осталось</p>
+			<div id="sale_timer">
+				<div>
+					<span>0</span>дней
+				</div>
+				<div>
+					<span>0</span>часов
+				</div>
+				<div>
+					<span>0</span>минут
+				</div>
+				<div>
+					<span>0</span>секунд
+				</div>
+			</div>
+		</div>
+
+		*здесь ссылка на полезные статьи*
+		
 	</div>
 
-
+	<div class="footer"></div>
 </body>
-
 </html>
