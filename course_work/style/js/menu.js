@@ -11,13 +11,13 @@ document.getElementsByClassName("menu")[0].innerHTML = `
 			</div>
 		</div>
 		<ul>
-			<li><a href="">Главная</a></li>
+			<li><a href="index.html">Главная</a></li>
 			<li><a href="">Каталог</a></li>
 			<ul class="submenu">
-				<li><a href="">Краски</a></li>
-				<li><a href="">Кисти художественные</a></li>
-				<li><a href="">Пластика и пластилин</a></li>
-				<li><a href="">Декорирование</a></li>
+				<li><a href="paints.html">Краски</a></li>
+				<li><a href="brushes.html">Кисти художественные</a></li>
+				<li><a href="plastic.html">Пластика и пластилин</a></li>
 			</ul>
-			<li><a href="">Контакты</a></li>
+			<li><a href="infoart.html">Инфо-арт</a></li>
+			<li><a href="contacts.html">Контакты</a></li>
 		</ul>`;

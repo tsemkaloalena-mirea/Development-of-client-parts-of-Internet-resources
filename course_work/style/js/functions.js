@@ -61,9 +61,14 @@ function changeProductCard(n, event) {
 
 function loadProducts(productsType) {
 	let products;
-	// !!!!!!!!!!!!!!!!! другие типы
 	if (productsType == "paints") {
 		products = paints;
+	} else if (productsType == "brushes") {
+		products = brushes;
+	} else if (productsType == "plastic") {
+		products = plastic;
+	} else {
+		return;
 	}
 	let catalogGallery = document.getElementsByClassName("catalog_gallery")[0];
 	for (let i = 0; i < products.length; i++) {
@@ -100,16 +105,22 @@ function fixCardsHeight() {
 
 function showModal(productsType, i, event) {
 	let products;
-	// !!!!!!!!!!! ДРУГИЕ ТИПЫ
 	if (productsType == "paints") {
 		products = paints;
+	} else if (productsType == "brushes") {
+		products = brushes;
+	} else if (productsType == "plastic") {
+		products = plastic;
+	} else {
+		return;
 	}
+
 	let nameField = document.querySelector("#product_description_name");
 	let priceField = document.querySelector("#product_description_price span");
 	let quantityField = document.querySelector("#product_description_quantity span");
 	let manufacturerField = document.querySelectorAll("#product_description_info>p>span")[0];
 	let countryField = document.querySelectorAll("#product_description_info>p>span")[1];
-	let volumeField = document.querySelectorAll("#product_description_info>p>span")[2];
+	let additionalField = document.querySelectorAll("#product_description_info>p")[2];
 	let descriptionField = document.getElementById("product_description_text");
 	let imageField = document.querySelector("#product_description img");
 	
@@ -118,7 +129,14 @@ function showModal(productsType, i, event) {
 	quantityField.innerHTML = products[i].quantity;
 	manufacturerField.innerHTML = products[i].manufacturer;
 	countryField.innerHTML = products[i].country;
-	volumeField.innerHTML = products[i].volume;
+	if (productsType == "paints") {
+		additionalField.innerHTML = "Объём: <span>" + products[i].volume + "</span>";
+	} else if (productsType == "brushes") {
+		additionalField.innerHTML = "Материал ворса: <span>" + products[i].material + "</span>";
+	} else if (productsType == "plastic") {
+		additionalField.innerHTML = "Вес: <span>" + products[i].weight + "</span>";
+	}
+	
 	descriptionField.innerHTML = products[i].description;
 	imageField.setAttribute("src", "style/images/catalog/" + productsType + "/" + products[i].image);
 
@@ -209,4 +227,48 @@ function checkLoginForm() {
 			email.style.boxShadow = "none";
 		}
 	});
+}
+
+function showOrHideArtInfo(i, event) {
+	let infoBlock = document.querySelectorAll(".infoart_container>div")[i];
+	let infoName = document.querySelectorAll(".infoart_container>h1")[i];
+	if (getComputedStyle(infoBlock).display == "none") {
+		infoBlock.style.display = "block";
+		infoName.style.borderBottomLeftRadius = "0";
+		infoName.style.borderBottomRightRadius = "0";
+	}
+	else {
+		infoBlock.style.display = "none";
+		infoName.style.borderBottomLeftRadius = "4px";
+		infoName.style.borderBottomRightRadius = "4px";
+	}
+}
+
+function loadInfoArts() {
+	let infoBox = document.getElementById("infoart_box");
+	for (let i = 0; i < infoList.length; i++) {
+		let newInfoContainer = document.createElement("div");
+		newInfoContainer.classList.add("infoart_container");
+		let infoName = document.createElement("h1");
+		infoName.append(infoList[i].name);
+		infoName.addEventListener("click", showOrHideArtInfo.bind(event, i));
+		let infoImage1 = document.createElement("img");
+		infoImage1.setAttribute("src", "style/images/infoart/" + infoList[i].img1);
+		let infoImage2 = document.createElement("img");
+		infoImage2.setAttribute("src", "style/images/infoart/" + infoList[i].img2);
+		let infoInnerDiv = document.createElement("div");
+		infoInnerDiv.appendChild(infoImage1);
+		let infoParagraph = document.createElement("p");
+		infoParagraph.append(infoList[i].paragraphs[0]);
+		infoInnerDiv.appendChild(infoParagraph);
+		infoInnerDiv.appendChild(infoImage2);
+		for (let j = 1; j < infoList[i].paragraphs.length; j++) {
+			infoParagraph = document.createElement("p");
+			infoParagraph.append(infoList[i].paragraphs[j]);
+			infoInnerDiv.appendChild(infoParagraph);
+		}
+		newInfoContainer.appendChild(infoName);
+		newInfoContainer.appendChild(infoInnerDiv);
+		infoBox.appendChild(newInfoContainer);
+	}
 }
