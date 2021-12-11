@@ -128,12 +128,20 @@ body *{
 }
 .change .bar1 {
 	transform: rotate(-45deg) translate(-10px, 8px);
+	-o-transform: rotate(-45deg) translate(-10px, 8px);
+	-ms-transform: rotate(-45deg) translate(-10px, 8px);
+	-moz-transform: rotate(-45deg) translate(-10px, 8px);
+	-webkit-transform: rotate(-45deg) translate(-10px, 8px);
 }
 .change .bar2 {
 	opacity: 0;
 }
 .change .bar3 {
 	transform: rotate(45deg) translate(-8px, -8px);
+	-o-transform: rotate(45deg) translate(-8px, -8px);
+	-ms-transform: rotate(45deg) translate(-8px, -8px);
+	-moz-transform: rotate(45deg) translate(-8px, -8px);
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .footer {
@@ -503,12 +511,20 @@ body *{
 }
 .cross:before{
 	background-image: url("../style/images/toggle-menu-1.png");
-	transform:rotate(45deg);
+	transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 	left:1px;
 }
 .cross:after{
 	background-image: url("../style/images/toggle-menu-3.png");
 	transform:rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
 }
 /* End of Catalog */
 
@@ -827,10 +843,18 @@ body *{
 #close_modal_btn:before{
 	background-image: url("../style/images/toggle-menu-1.png");
 	transform:rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }
 #close_modal_btn:after{
 	background-image: url("../style/images/toggle-menu-3.png");
 	transform:rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
 }
 /* End of Product Description */
 
@@ -911,6 +935,10 @@ body *{
 	width: calc(200% + 8px);
 	height: 200%;
 	transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
 	background: rgba(255, 255, 255, 0.13);
 	background: linear-gradient(
 	  to top , 
